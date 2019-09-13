@@ -30,5 +30,7 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+
+  "homepage": "https://github.com/ChoiHyeongu/React-Native/tree/master/ReactJS/movie_app_2019"
 }
