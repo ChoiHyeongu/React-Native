@@ -3,6 +3,9 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 import SignupButton from './SignupButton.js'
 
 export default function Welcome1() {
+
+    const {navigation} = this.props;
+
     return (
         <View style={styles.container}>
             <View style={styles.halfContainer}>
@@ -29,7 +32,9 @@ export default function Welcome1() {
                 <Text style={styles.tos}>
                     서비스 이용을 위한 이용약관
                  </Text>
-                <SignupButton title={'회원가입'}/>
+                <SignupButton 
+                onPress={()=>navigation.navigate("Welcome2")}
+                title={'회원가입'}/>
                 <Text style={styles.alreadyRegister}>이미 계정이 있으신가요?</Text>
             </View>
         </View>

@@ -13,9 +13,7 @@ class App extends React.Component {
     return (
       <View style={styles.container}>
         <Text style={styles.turnText}>It's is <TurnInfo turn={this.state.turn ? "circle" : "cross"} /> turn.</Text>
-        <View style={styles.board}>
-          <Board />
-        </View>
+        <Board />
         <View style={styles.time}>
           <Text style={styles.text}>1:32</Text>
           <Text style={styles.timeText}>Time passed</Text>
@@ -50,15 +48,8 @@ const styles = StyleSheet.create({
     margin: 70,
   },
 
-  board: {
-    backgroundColor: "white",
-    width: 400,
-    height: 400,
-    alignItems: "center",
-  },
-
   time: {
-    margin:30,
+    marginTop: 70,
     alignItems: "center",
   }
 });
