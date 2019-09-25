@@ -1,8 +1,8 @@
 import React from 'react';
 import './TodoListTemplate.css'
-import Palette from './Palette';
 
-const TodoListTemplate = ({form, children}) => {
+const TodoListTemplate = ({form, palette, children}) => {
+
     return (
       <main className="todo-list-template">
         <div className="title">
@@ -10,7 +10,7 @@ const TodoListTemplate = ({form, children}) => {
         </div>
         <div>
         <section className="palette-wrapper" >
-        <Palette />
+          {palette}
         </section>
         </div>
         <section className="form-wrapper">

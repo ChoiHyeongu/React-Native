@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import TodoItem from './TodoItem.js'
-import Palette from './Palette.js';
 class TodoItemList extends Component {
 
     shouldComponentUpdate(nextProps, nextState) {
