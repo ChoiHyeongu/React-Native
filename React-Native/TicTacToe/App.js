@@ -16,7 +16,8 @@ class App extends React.Component {
         <Board />
         <View style={styles.time}>
           <Text style={styles.text}>1:32</Text>
-          <Text style={styles.timeText}>Time passed</Text>
+          <Text style=
+          {styles.timeText}>Time passed</Text>
         </View>
       </View>
     );
