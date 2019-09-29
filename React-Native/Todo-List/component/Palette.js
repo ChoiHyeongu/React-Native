@@ -9,7 +9,7 @@ export default function Palette() {
     )
     
     return(
-        <View>
+        <View style={styles.palette}>
             {colorList}
         </View>
     )
@@ -17,6 +17,6 @@ export default function Palette() {
 
 const styles = StyleSheet.create({
     palette: {
-        
-    }
+        justifyContent: "center",
+    },
 })
