@@ -1,23 +1,35 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View} from 'react-native';
 
-
-export default class TodoItem extends React.Component{
-    render(){
-        const {text, checked, id, onToggle, onRemove} = this.props;
+export default class TodoItemList extends React.Component {
+    render() {
+        console.log("Item rendering");
+        const {text, id} = this.props;
         
-        return (
-            <View>
+        return(
+            <View style={styles.todoItem}>
                 <Text>
-                    X
+                    &times;
                 </Text>
-                <View>
-                    <Text>{text}</Text>
-                </View>
-                <View>
-                    Checked
-                </View>
+                <Text style={styles.todoItem}>
+                    {text}
+                </Text>
+                <Text>
+                    ✓
+                </Text>
             </View>
-        )
+        );
     }
 }
+
+const styles = StyleSheet.create({
+    todoItem: {
+        flexDirection: "row",
+        padding: 12,
+        alignItems: "center",
+    },
+
+    todoItemText: {
+        fontSize: 20,
+    }
+})

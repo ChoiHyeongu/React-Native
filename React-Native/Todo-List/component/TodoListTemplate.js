@@ -1,36 +1,32 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
+import { bold } from 'ansi-colors';
 
-export default function TodoListTemplate({ form, children, palette }) {
+export default function TodoListTemplate({ form, children }) {
     return (
-        <View style={styles.todoListTemplate}>
+        <View>
             <Text style={styles.title}>
                 오늘 할 일
             </Text>
-            <View style={styles.paletteWrapper}>
-                {palette}
+            <View>
+                {form}
+            </View>
+            <View>
+                {children}
             </View>
         </View>
     );
 }
 
 const styles = StyleSheet.create({
-    todoListTemplate: {
-        alignContent: "flex-start",
-        backgroundColor: "white",
-    },
 
     title: {
-        textAlign: "center",
+        width: "100%",
         padding: 24,
-        fontWeight: "200",
+        textAlign: "center",
         fontSize: 30,
+        fontWeight: "400",
         backgroundColor: "#22b8cf",
-        color: "white"
-    },
-
-    paletteWrapper: {
-        padding: 12,
-        backgroundColor: "#f1f3f5",
+        color: "white",
     }
 })
