@@ -1,8 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { bold } from 'ansi-colors';
 
-export default function TodoListTemplate({ form, children }) {
+export default function TodoListTemplate({ form, palette, children }) {
     return (
         <View>
             <Text style={styles.title}>
@@ -10,6 +9,9 @@ export default function TodoListTemplate({ form, children }) {
             </Text>
             <View>
                 {form}
+            </View>
+            <View style={styles.paletteWrap}>
+                {palette}
             </View>
             <View>
                 {children}
@@ -28,5 +30,11 @@ const styles = StyleSheet.create({
         fontWeight: "400",
         backgroundColor: "#22b8cf",
         color: "white",
+    },
+
+    paletteWrap: {
+        padding: 12,
+        justifyContent: "center",
+        backgroundColor: "#f1f3f5"
     }
 })
