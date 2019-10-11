@@ -1,15 +1,15 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 
-export default function Member(profileName) {
+export default function Member({profileName, onClick}) {
     return (
-        <View style={styles.container}>
+        <View style={styles.container} onStartShouldSetResponder={()=> onClick()}>
             <Image
                 style={styles.profileImage}
                 source={require('C:/Users/Motivation/Desktop/Programming/React-Native/React-Native/Project/components/img/profile.png')}
             />
             <Text style={styles.name}>
-                최형우
+                {profileName}
             </Text>
         </View>
     );
