@@ -5,7 +5,11 @@ import MainScreen from './screens/MainScreen.js'
 
 const AppStackNavigator = createStackNavigator({
   Main:{
-    screen: MainScreen // MainScreen 컴포넌트를 네비게이터에 등록
+    screen: MainScreen 
+  },
+
+  Write: {
+    screen: WriteScreen
   }
 });
 
